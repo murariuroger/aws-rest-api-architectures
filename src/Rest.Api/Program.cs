@@ -33,4 +33,7 @@ app.MapPost("/transactions",
     => await transactionRepository.UpsertAsync(request)
 );
 
+app.Lifetime.ApplicationStarted.Register(() => app.Logger.LogInformation("REST API is now online. (Environment: {Environment})", builder.Environment.EnvironmentName));
+app.Lifetime.ApplicationStopped.Register(() => app.Logger.LogInformation("REST API was stopped. (Environment: {Environment})", builder.Environment.EnvironmentName));
+
 app.Run();
