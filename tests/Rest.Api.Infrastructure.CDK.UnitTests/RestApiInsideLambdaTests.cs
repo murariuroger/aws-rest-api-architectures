@@ -32,6 +32,7 @@ namespace Rest.Api.Infrastructure.CDK.UnitTests
                 LambdaDescription = LambdaDescription,
                 LambdaHandler = LambdaHandler,
                 LambdaAssembliesPath = LambdaAssembliesPath,
+                RestApiName = nameof(RestApiName),
                 ApiGatewayStageName = ApiGatewayStageName
             });
         }

@@ -17,6 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rest.Api.Infrastructure.CDK
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48C0F02D-9E7F-48F6-BC07-6ACACFCA4E18}"
 	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
 		pull_request_template.md = pull_request_template.md
 		README.md = README.md
 	EndProjectSection
@@ -25,7 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1DC99522-3D9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3671CB64-B253-4353-8DAD-0610387B6F69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rest.Api.Infrastructure.CDK.UnitTests", "tests\Rest.Api.Infrastructure.CDK.UnitTests\Rest.Api.Infrastructure.CDK.UnitTests.csproj", "{99EDC7D8-D285-42AC-9FC5-C4422BC55EAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rest.Api.Infrastructure.CDK.UnitTests", "tests\Rest.Api.Infrastructure.CDK.UnitTests\Rest.Api.Infrastructure.CDK.UnitTests.csproj", "{99EDC7D8-D285-42AC-9FC5-C4422BC55EAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
