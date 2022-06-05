@@ -1,3 +1,5 @@
+# Running REST APIs inside AWS
+[![CI](https://github.com/murariuroger/aws-rest-api-architectures/actions/workflows/dotnet.yml/badge.svg)](https://github.com/murariuroger/aws-rest-api-architectures/actions/workflows/dotnet.yml)
 # Description
 WIP
 
