@@ -9,7 +9,7 @@ using Rest.Api.Infrastructure.CDK.IAM;
 namespace Rest.Api.Infrastructure.CDK.Constructs
 {
     /// <summary>
-    /// RestApiInsideLambda construct is responsible for creating:
+    /// Construct is responsible for creating:
     /// - IAM Role for Lambda
     /// - Lambda function
     /// - API Gateway which proxies all requests to Lambda
@@ -21,10 +21,10 @@ namespace Rest.Api.Infrastructure.CDK.Constructs
             // IAM
             var roleProps = new RoleProps()
             {
-                RoleName = $"{props.Name}LambdaRole",
+                RoleName = $"LambdaRole",
                 AssumedBy = new ServicePrincipal("lambda.amazonaws.com")
             };
-            var lambdaRole = new DynamoDBLambdaRole(this, $"{props.Name}LambdaRole", roleProps, props.DynamoDbTable);
+            var lambdaRole = new DynamoDBLambdaRole(this, $"LambdaRole", roleProps, props.DynamoDbTable);
 
             // Lambda
             var lambdaProps = new FunctionProps
@@ -39,7 +39,7 @@ namespace Rest.Api.Infrastructure.CDK.Constructs
                 MemorySize = 2500,
                 Tracing = Tracing.ACTIVE
             };
-            var lambda = new Function(scope, $"{props.Name}Function", lambdaProps);
+            var lambda = new Function(scope, $"Function", lambdaProps);
 
             // ApiGateway
             var restApiProps = new RestApiProps
@@ -47,10 +47,10 @@ namespace Rest.Api.Infrastructure.CDK.Constructs
                 Description = $"Proxy for {lambda.FunctionArn}",
                 DeployOptions = new StageOptions()
                 {
-                    StageName = "Production"
+                    StageName = props.ApiGatewayStageName
                 }
             };
-            var apiGateway = new ProxyRestApi(this, $"{props.Name}ApiGateway", restApiProps, lambda);
+            var apiGateway = new ProxyRestApi(this, props.RestApiName, restApiProps, lambda);
         }
     }
 }

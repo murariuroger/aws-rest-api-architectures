@@ -33,16 +33,16 @@ namespace Rest.Api.Infrastructure.CDK.DynamoDb
                 ProjectionType = ProjectionType.ALL
             });
 
-            this.AutoScaleReadCapacity(new EnableScalingProps { MinCapacity = 10, MaxCapacity = 10000 })
+            this.AutoScaleReadCapacity(new EnableScalingProps { MinCapacity = 10, MaxCapacity = 1000 })
                 .ScaleOnUtilization(new UtilizationScalingProps { TargetUtilizationPercent = 85 });
 
-            this.AutoScaleWriteCapacity(new EnableScalingProps { MinCapacity = 10, MaxCapacity = 10000 })
+            this.AutoScaleWriteCapacity(new EnableScalingProps { MinCapacity = 10, MaxCapacity = 1000 })
                 .ScaleOnUtilization(new UtilizationScalingProps { TargetUtilizationPercent = 85 });
 
-            this.AutoScaleGlobalSecondaryIndexReadCapacity(DynamoDbConstants.TransactionsUserDateIndexName, new EnableScalingProps { MinCapacity = 10, MaxCapacity = 10000 })
+            this.AutoScaleGlobalSecondaryIndexReadCapacity(DynamoDbConstants.TransactionsUserDateIndexName, new EnableScalingProps { MinCapacity = 10, MaxCapacity = 1000 })
                 .ScaleOnUtilization(new UtilizationScalingProps { TargetUtilizationPercent = 85 });
 
-            this.AutoScaleGlobalSecondaryIndexWriteCapacity(DynamoDbConstants.TransactionsUserDateIndexName, new EnableScalingProps { MinCapacity = 10, MaxCapacity = 10000 })
+            this.AutoScaleGlobalSecondaryIndexWriteCapacity(DynamoDbConstants.TransactionsUserDateIndexName, new EnableScalingProps { MinCapacity = 10, MaxCapacity = 1000 })
                 .ScaleOnUtilization(new UtilizationScalingProps { TargetUtilizationPercent = 85 });
         }
     }
