@@ -3,19 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rest.Api", "Rest.Api", "{11C6C234-80B8-49F4-A92F-9CA1795EAB7C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CloudNative.Rest.Api", "CloudNative.Rest.Api", "{2415949B-5D1C-4027-AF49-5CB1EF48156F}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Containerized.Rest.Api", "Containerized.Rest.Api", "{A30636A2-2126-419F-9266-09C7B5B50B42}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iac", "iac", "{2EABEC6E-05AA-477C-BE1A-D552849F1314}"
 	ProjectSection(SolutionItems) = preProject
 		iac\cdk.json = iac\cdk.json
 		iac\README.md = iac\README.md
 	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rest.Api.Core", "Rest.Api.Core", "{2B99002F-92ED-4051-B882-900DC0889D24}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rest.Api", "src\Rest.Api\Rest.Api.csproj", "{326E60BB-6BB4-481B-9740-4651FB153794}"
 EndProject
@@ -26,7 +18,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48C0F02D-9E7F-48F6-BC07-6ACACFCA4E18}"
 	ProjectSection(SolutionItems) = preProject
 		pull_request_template.md = pull_request_template.md
+		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1DC99522-3D97-4611-AE81-53D590CBCEE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3671CB64-B253-4353-8DAD-0610387B6F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rest.Api.Infrastructure.CDK.UnitTests", "tests\Rest.Api.Infrastructure.CDK.UnitTests\Rest.Api.Infrastructure.CDK.UnitTests.csproj", "{99EDC7D8-D285-42AC-9FC5-C4422BC55EAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,14 +45,19 @@ Global
 		{63D03702-18C1-4047-9449-D1D956B9A465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63D03702-18C1-4047-9449-D1D956B9A465}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63D03702-18C1-4047-9449-D1D956B9A465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99EDC7D8-D285-42AC-9FC5-C4422BC55EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99EDC7D8-D285-42AC-9FC5-C4422BC55EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99EDC7D8-D285-42AC-9FC5-C4422BC55EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99EDC7D8-D285-42AC-9FC5-C4422BC55EAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{326E60BB-6BB4-481B-9740-4651FB153794} = {11C6C234-80B8-49F4-A92F-9CA1795EAB7C}
-		{3299E07E-1C1A-47E8-8F97-EEB5178A72DD} = {2B99002F-92ED-4051-B882-900DC0889D24}
+		{326E60BB-6BB4-481B-9740-4651FB153794} = {1DC99522-3D97-4611-AE81-53D590CBCEE0}
+		{3299E07E-1C1A-47E8-8F97-EEB5178A72DD} = {1DC99522-3D97-4611-AE81-53D590CBCEE0}
 		{63D03702-18C1-4047-9449-D1D956B9A465} = {2EABEC6E-05AA-477C-BE1A-D552849F1314}
+		{99EDC7D8-D285-42AC-9FC5-C4422BC55EAA} = {3671CB64-B253-4353-8DAD-0610387B6F69}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E7C92CE-A9F3-4A61-9E12-26B2927B21CC}

@@ -18,6 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+	<_Parameter1>Rest.Api.Infrastructure.CDK.UnitTests</_Parameter1>
+  </AssemblyAttribute>
+    </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\Rest.Api.Core.Storage\Rest.Api.Core.Storage.csproj" />
   </ItemGroup>
 

@@ -6,7 +6,7 @@ namespace Rest.Api.Infrastructure.CDK.IAM
 {
     internal class DynamoDBLambdaRole : Role
     {
-        public DynamoDBLambdaRole(Construct scope, string id, RoleProps props, Table dynamoDbTable) : base(scope, id, props)
+        public DynamoDBLambdaRole(Construct scope, string id, RoleProps props, ITable dynamoDbTable) : base(scope, id, props)
         {
             AddToPolicy(new PolicyStatement(
                 new PolicyStatementProps

@@ -1,4 +1,6 @@
 ﻿using Amazon.CDK;
+using Rest.Api.Infrastructure.CDK.DynamoDb;
+using Rest.Api.Infrastructure.CDK.Stacks;
 
 namespace Rest.Api.Infrastructure.CDK
 {
@@ -7,7 +9,8 @@ namespace Rest.Api.Infrastructure.CDK
         public static void Main(string[] args)
         {
             var app = new App();
-            new RestApiInfrastructureCdkStack(app, "RestApiInfrastructureCdkStack", new StackProps
+
+            var mainStack = new MainStack(app, "MainStack", new StackProps
             {
                 Env = new Amazon.CDK.Environment
                 {
@@ -15,6 +18,7 @@ namespace Rest.Api.Infrastructure.CDK
                     Region = "eu-west-1"
                 }
             });
+
             app.Synth();
         }
     }

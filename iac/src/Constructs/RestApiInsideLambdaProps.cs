@@ -1,18 +1,14 @@
-﻿using Amazon.CDK.AWS.DynamoDB;
+﻿using Amazon.CDK;
+using Amazon.CDK.AWS.DynamoDB;
 
 namespace Rest.Api.Infrastructure.CDK.Constructs
 {
     internal class RestApiInsideLambdaProps
     {
         /// <summary>
-        /// Name will be appended to AWS resources.
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
         /// DynamoDB Table that will be used by AWS Lambda.
         /// </summary>
-        public Table DynamoDbTable { get; set; }
+        public ITable DynamoDbTable { get; set; }
 
         /// <summary>
         /// Lambda description.
@@ -27,6 +23,16 @@ namespace Rest.Api.Infrastructure.CDK.Constructs
         /// <summary>
         /// Lambda entry point.
         /// </summary>
-        public string LambdaHandler{ get; set; }
+        public string LambdaHandler { get; set; }
+
+        /// <summary>
+        /// Rest Api Name
+        /// </summary>
+        public string RestApiName { get; set; }
+
+        /// <summary>
+        /// Stage name for Api Gateway
+        /// </summary>
+        public string ApiGatewayStageName { get; set; }
     }
 }
